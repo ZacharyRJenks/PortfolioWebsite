@@ -3,7 +3,13 @@
     <head>
         <meta charset="utf-8"/>
         <title>Zachary R. Jenks</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
+        <link href="fontawesome-free-6.2.0-web/css/fontawesome.css" rel="stylesheet">
+        <link href="fontawesome-free-6.2.0-web/css/brands.css" rel="stylesheet">
+        <link href="fontawesome-free-6.2.0-web/css/solid.css" rel="stylesheet">
     </head>
 
     <body>
@@ -13,7 +19,7 @@
 
                     <div class="left-side">
 
-                        <div class="nav-link-wrapper">
+                        <div class="nav-link-wrapper active-nav-link">
                             <a href="index.html">Home</a>
                         </div>
 
@@ -26,7 +32,7 @@
                     <div class="right-side">
 
                         <div class="brand">
-                            <div>ZACHARY R. JENKS</div>
+                            <a href="https://www.linkedin.com/in/zachary-jenks-52999516b/">ZACHARY R. JENKS</a>
                         </div>
 
                     </div>
@@ -36,12 +42,13 @@
 
                 <div class="portfolio-items-wrapper">
 
-                    <div class="portfolio-item-wrapper">
+                    <div class="portfolio-item-wrapper" data-href="resume.html">
+
                         <div class="portfolio-img-background" style="background-image:url(images/portfolio1.jpg)"></div>
 
                         <div class="img-text-wrapper">
                             <div class="logo-wrapper">
-                                <img src="images/logos/dailysmarty.png">
+                                <img src="images/logos/edutechional.png">
                             </div>
 
                             <div class="subtitle">
@@ -53,7 +60,7 @@
                     </div>
 
                     
-                    <div class="portfolio-item-wrapper">
+                    <div class="portfolio-item-wrapper" data-href="coding-projects.html">
                         <div class="portfolio-img-background" style="background-image:url(images/portfolio2.jpg)"></div>
 
                         <div class="img-text-wrapper">
@@ -70,7 +77,7 @@
                     </div>
 
                     
-                    <div class="portfolio-item-wrapper">
+                    <div class="portfolio-item-wrapper" data-href="server-projects.html">
                         <div class="portfolio-img-background" style="background-image:url(images/portfolio3.jpg)"></div>
 
                         <div class="img-text-wrapper">
@@ -87,7 +94,7 @@
                     </div>
 
                     
-                    <div class="portfolio-item-wrapper">
+                    <div class="portfolio-item-wrapper" data-href="web-projects.html">
                         <div class="portfolio-img-background" style="background-image:url(images/portfolio4.jpg)"></div>
 
                         <div class="img-text-wrapper">
@@ -103,7 +110,7 @@
 
                     </div>
                     
-                    <div class="portfolio-item-wrapper">
+                    <div class="portfolio-item-wrapper" data-href="recipes.html">
                         <div class="portfolio-img-background" style="background-image:url(images/portfolio5.jpg)"></div>
 
                         <div class="img-text-wrapper">
@@ -119,7 +126,7 @@
 
                     </div>
                     
-                    <div class="portfolio-item-wrapper">
+                    <div class="portfolio-item-wrapper" data-href="painting.html">
                         <div class="portfolio-img-background" style="background-image:url(images/portfolio6.jpg)"></div>
 
                         <div class="img-text-wrapper">
@@ -135,60 +142,21 @@
 
                     </div>
 
-                    
-                    <div class="portfolio-item-wrapper">
-                        <div class="portfolio-img-background" style="background-image:url(images/portfolio0.jpg)"></div>
-
-                        <div class="img-text-wrapper">
-                            <div class="logo-wrapper">
-                                <img src="images/logos/devcamp.png">
-                            </div>
-
-                            <div class="subtitle">
-                                Under Construction
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    
-                    <div class="portfolio-item-wrapper">
-                        <div class="portfolio-img-background" style="background-image:url(images/portfolio0.jpg)"></div>
-
-                        <div class="img-text-wrapper">
-                            <div class="logo-wrapper">
-                                <img src="images/logos/devcamp.png">
-                            </div>
-
-                            <div class="subtitle">
-                                Under Construction
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    
-                    <div class="portfolio-item-wrapper">
-                        <div class="portfolio-img-background" style="background-image:url(images/portfolio0.jpg)"></div>
-
-                        <div class="img-text-wrapper">
-                            <div class="logo-wrapper">
-                                <img src="images/logos/devcamp.png">
-                            </div>
-
-                            <div class="subtitle">
-                                Under Construction
-                            </div>
-
-                        </div>
-
-                    </div>
-
                 </div>
 
             </div>
+
+            <footer>
+                <div class="first-column">
+                    <h3>Connect</h3>
+                    <div class="connect-links">
+                        <li><a href="https://www.linkedin.com/in/zachary-jenks-52999516b/" target="_blank">LinkedIn <i class="fa-brands fa-linkedin"></i></a></li>
+                        <li><a href="https://github.com/ZacharyRJenks" target="_blank">GitHub <i class="fa-brands fa-github"></i></a></li>
+                        <li><a href=""></a></li>
+                    </div>
+                </div>
+
+            </footer>
 
         </div>
 
@@ -207,7 +175,13 @@
             portfolioItem.addEventListener('mouseout', () => {
                 portfolioItem.childNodes[1].classList.remove('img-darken');
             })
+
+            portfolioItem.addEventListener('mouseup',() => {
+                window.location = portfolioItem.getAttribute("data-href");
+            })
+
         });
+
     </script>
 
  </html>

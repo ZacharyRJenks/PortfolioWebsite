@@ -1,0 +1,8 @@
+Goals:
+    1. homepage DONE
+    2. Navbar DONE
+    3. add a bio page
+    4. add a resume page
+    5. add a java projects page
+    6. add a server hosting page
+    7. add a HTML projects page
