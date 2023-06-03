@@ -1,9 +1,10 @@
 /* Master Styles */
+
 body {
     font-family: "roboto condensed", sans-serif;
     margin: 0px;
     background-color: rgb(12, 10, 10);
-    color: white;
+    color: lightgray;
 }
 
 h3 {
@@ -58,6 +59,7 @@ li {
 }
 
 /*Navigation bar Styles*/
+
 .nav-wrapper {
     display: flex;
     justify-content: space-between;
@@ -196,3 +198,39 @@ li {
 .profile-content-wrapper h1 {
     color: red;
 }
+
+/*Resume page styles*/
+
+ .profile {
+    font-size: 13px;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid; 
+    padding: 5rem;
+    background-color: #070707;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+ }
+ @media only screen and (max-width: 768px){
+    .profile{
+    width: 100%;
+    grid-template-columns: 1fr;
+    padding: 3rem;
+    gap: 7rem;
+    }
+ }
+
+ .profile-two {
+    grid-column: 1 / -1;
+    margin-bottom: 2rem;
+ }
+
+ .profile-container{
+    display: flex;
+    gap: 2rem;
+ }
+
+ .profile-img{
+    max-width: 250px;
+    max-height: 300px;
+ }
